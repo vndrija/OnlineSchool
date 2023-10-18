@@ -1,0 +1,46 @@
+﻿<Window x:Class="WpfApp2.Windows.AllSchoolsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.Windows"
+        mc:Ignorable="d"
+        Title="AllSchoolsWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" 
+              VerticalAlignment="Top" 
+              Height="30">
+            <MenuItem Name="miAddSchool" Height="30" Header="Dodaj" Click="miAddSchool_Click"></MenuItem>
+            <MenuItem Name="miUpdateSchool" Height="30" Header="Izmeni" Click="miUpdateSchool_Click"></MenuItem>
+            <MenuItem Name="miDeleteSchool" Height="30" Header="Obrisi" Click="miDeleteSchool_Click"></MenuItem>
+            <Label Content="Pretraga:"></Label>
+            <TextBox Height="30" Width="150" Name="txtSearch" KeyUp="txtSearch_KeyUp" ></TextBox>
+        </Menu>
+
+        <DataGrid CanUserAddRows="False" 
+                  IsReadOnly="True" 
+                  Grid.Row="1" 
+                  Name="dgSchool" 
+                  Width="800" 
+                  Margin="0,0,-8,0"
+                  AutoGeneratingColumn="dgClass_AutoGeneratingColumn"
+                  SelectionChanged="dgSchoolProfessor_Selected_1"/>
+
+        <DataGrid CanUserAddRows="False" 
+                  IsReadOnly="True"  
+                  Grid.Row="2" 
+                  Name="dgSchoolProfessor"
+                  Width="Auto" 
+                  Height="150" 
+                  VerticalAlignment="Center"
+                  SelectionMode="Single"
+                  AutoGeneratingColumn="dgSchoolProfessor_AutoGeneratingColumn"
+                  MouseDoubleClick="dgSchoolProfessor_MouseDoubleClick"></DataGrid>
+    </Grid>
+</Window>

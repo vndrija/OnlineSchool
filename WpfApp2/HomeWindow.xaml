@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApp2.HomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="HomeWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="btnLogin" Content="Login" Margin="508,10,164,377" Click="btnLogin_Click" ></Button>
+        <Button x:Name="btRegister" Content="Register" Margin="354,10,318,377" Click="btRegister_Click"  ></Button>
+        <Button x:Name="btnProfe" Content="Profe" Margin="10,290,578,51" Click="btnProfe_Click"   ></Button>
+        <Button x:Name="btnStudenti" Content="Studenti" Margin="294,285,294,56" Click="btnStudenti_Click"   ></Button>
+        <Button x:Name="btnSkole" Content="Skole" Margin="294,144,294,197" Click="btnSkole_Click"    ></Button>
+        <Button x:Name="btnCasovi" Content="Casovi" Margin="10,144,578,197" Click="btnCasovi_Click"   ></Button>
+        <Button x:Name="btnJezici" Content="Jezici" Margin="577,144,11,197" Click="btnJezici_Click"   ></Button>
+        <Button x:Name="btnLogout" Content="Logout" Margin="661,10,11,377" Click="btnLogout_Click"   ></Button>
+        <Button x:Name="btnProfil" Content="Profil" Margin="191,10,481,377" Click="btnProfil_Click"   ></Button>
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>

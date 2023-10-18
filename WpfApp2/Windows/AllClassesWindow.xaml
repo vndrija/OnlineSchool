@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp2.Windows.AllClassesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.Windows"
+        mc:Ignorable="d"
+        Title="AllClassesWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" 
+              VerticalAlignment="Top" 
+              Height="30">
+            <MenuItem Name="miAddClass" Height="30" Header="Dodaj" Click="miAddClass_Click"></MenuItem>
+            <MenuItem Name="miUpdateClass" Height="30" Header="Promeni" Click="miUpdateClass_Click"></MenuItem>
+            <MenuItem Name="miDeleteClass" Height="30" Header="Obrisi" Click="miDeleteClass_Click"></MenuItem>
+            <Label Content="Pretraga:"></Label>
+            <TextBox Height="30" Width="150" Name="txtSearch" KeyUp="txtSearch_KeyUp" ></TextBox>
+        </Menu>
+
+        <DataGrid CanUserAddRows="False" 
+                  IsReadOnly="True" 
+                  Grid.Row="1" 
+                  Name="dgClass" 
+                  Width="Auto"
+                  Height="150"
+                  Margin="0,0,0,0"
+                  VerticalAlignment="Top"
+                  AutoGeneratingColumn="dgClass_AutoGeneratingColumn" SelectionChanged="dgClass_SelectionChanged"/>
+
+    </Grid>
+</Window>

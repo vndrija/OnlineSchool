@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfApp2.Windows.AllProfessorClasses"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.Windows"
+        mc:Ignorable="d"
+        Title="AllProfessorClasses" Height="450" Width="800">
+    <Grid Margin="0,0,0,35">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" 
+              VerticalAlignment="Top" 
+              Height="30">
+            <MenuItem Name="miReservateClass" Height="30" FontWeight="Bold" Header="Rezervisi" Click="miReservateClass_Click"></MenuItem>
+        </Menu>
+
+        <Menu Grid.Row="2" 
+              VerticalAlignment="Top" 
+              Height="30">
+            <MenuItem Name="miUnreservateClass" Height="30" FontWeight="Bold" Header="Otkazi" Click="miUnreservateClass_Click"></MenuItem>
+        </Menu>
+
+        <DataGrid CanUserAddRows="False" 
+                  IsReadOnly="True" 
+                  Grid.Row="1" 
+                  Name="dgClass" 
+                  Width="Auto"
+                  Height="150"
+                  VerticalAlignment="Top"
+                  AutoGeneratingColumn="dgClass_AutoGeneratingColumn" SelectionChanged="dgClass_SelectionChanged"/>
+
+        <DataGrid CanUserAddRows="False" 
+                  IsReadOnly="True" 
+                  Grid.Row="3" 
+                  Name="dgClasss" 
+                  Width="Auto"
+                  Height="150"
+                  VerticalAlignment="Top"
+                  AutoGeneratingColumn="dgClasss_AutoGeneratingColumn" SelectionChanged="dgClasss_SelectionChanged"/>
+    </Grid>
+</Window>

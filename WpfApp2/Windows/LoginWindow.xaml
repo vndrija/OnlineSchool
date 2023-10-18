@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp2.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.Windows"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="450" Width="800">
+    <Grid Height="100" >
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Margin="-220,0,220,0">
+            JMBG:
+        </Label>
+        <TextBox Grid.Row="0" Margin="285,5,225,5" Name="txtJmbg" Grid.ColumnSpan="2"/>
+        <Label Grid.Column="0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Margin="-220,33,220,33" Grid.RowSpan="3">
+            Sifra:
+        </Label>
+        <PasswordBox Grid.Row="1" Margin="285,5,225,5" Name="txtPassword" Grid.ColumnSpan="2"/>
+        <Button Grid.Row="2" HorizontalAlignment="Right" Margin="0,10,225,0" Click="Button_Click" Grid.ColumnSpan="2" Width="290">Login</Button>
+    </Grid>
+</Window>

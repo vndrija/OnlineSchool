@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp2.Windows.AddEditLanguageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.Windows"
+        mc:Ignorable="d"
+        Title="AddEditLanguageWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="20*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="20*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" 
+               Name="lblLanguageName" 
+               Content="Ime Jezika:"
+               HorizontalAlignment="Right" Width="169" Margin="0,142,551,236" Grid.ColumnSpan="2"/>
+
+        <TextBox Grid.Row="1" Name="txtLanguageName" Margin="0,137,10,251" Text ="{Binding Path=LanguageName, ValidatesOnDataErrors=True}" Grid.Column="1" />
+
+        <Button Name="btnCancel" Grid.Column="1" Grid.Row="7" Height="50" Width="100" Margin="5,5,5,5" Click="btnCancel_Click">Otkazi</Button>
+        <Button Name="btnSave" Grid.Column="1" Grid.Row="7" Height="50" Width="100" Margin="225,5,5,5" Click="btnSave_Click">Sacuvaj</Button>
+    </Grid>
+</Window>

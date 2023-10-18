@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{94C91228-EA11-4630-BC5B-62593AE299B5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp2</RootNamespace>
+    <AssemblyName>WpfApp2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Config.cs" />
+    <Compile Include="Models\Casovi.cs" />
+    <Compile Include="Models\Data.cs" />
+    <Compile Include="Models\ECas.cs" />
+    <Compile Include="Models\EPol.cs" />
+    <Compile Include="Models\EStatus.cs" />
+    <Compile Include="Models\ETipKorisnika.cs" />
+    <Compile Include="Models\Jezik.cs" />
+    <Compile Include="Models\RegistrovaniKorisnik.cs" />
+    <Compile Include="Models\Skola.cs" />
+    <Compile Include="MyExceptions\UserNotFoundException.cs" />
+    <Compile Include="Repos\CasRepo.cs" />
+    <Compile Include="Repos\ICasRepo.cs" />
+    <Compile Include="Repos\IJezikRepo.cs" />
+    <Compile Include="Repos\IRegistrovaniKorisnikRepo.cs" />
+    <Compile Include="Repos\ISkolaRepo.cs" />
+    <Compile Include="Repos\JezikRepo.cs" />
+    <Compile Include="Repos\RegistrovaniKorisnikRepo.cs" />
+    <Compile Include="Repos\SkolaRepo.cs" />
+    <Compile Include="Services\CasoviService.cs" />
+    <Compile Include="Services\ICasoviService.cs" />
+    <Compile Include="Services\IJezikService.cs" />
+    <Compile Include="Services\ISkolaService.cs" />
+    <Compile Include="Services\IKorisnikService.cs" />
+    <Compile Include="Services\JezikService.cs" />
+    <Compile Include="Services\SkolaService.cs" />
+    <Compile Include="Services\KorisnikService.cs" />
+    <Compile Include="Windows\AddEditClassesWindow.xaml.cs">
+      <DependentUpon>AddEditClassesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddEditLanguageWindow.xaml.cs">
+      <DependentUpon>AddEditLanguageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddEditProfessorWindow.xaml.cs">
+      <DependentUpon>AddEditProfessorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddEditSchoolWindow.xaml.cs">
+      <DependentUpon>AddEditSchoolWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AddEditStudentWindow.xaml.cs">
+      <DependentUpon>AddEditStudentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AdminSchoolWindow.xaml.cs">
+      <DependentUpon>AdminSchoolWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AllClassesWindow.xaml.cs">
+      <DependentUpon>AllClassesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AllLanguagesWindow.xaml.cs">
+      <DependentUpon>AllLanguagesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AllProfessorClasses.xaml.cs">
+      <DependentUpon>AllProfessorClasses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AllProfessorsWindow.xaml.cs">
+      <DependentUpon>AllProfessorsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AllSchoolsWindow.xaml.cs">
+      <DependentUpon>AllSchoolsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AllStudentsWindow.xaml.cs">
+      <DependentUpon>AllStudentsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RegisterWindow.xaml.cs">
+      <DependentUpon>RegisterWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="HomeWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HomeWindow.xaml.cs">
+      <DependentUpon>HomeWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Windows\AddEditClassesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddEditLanguageWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddEditProfessorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddEditSchoolWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddEditStudentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AdminSchoolWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AllClassesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AllLanguagesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AllProfessorClasses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AllProfessorsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AllSchoolsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AllStudentsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\createTables.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
