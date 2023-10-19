@@ -1,5 +1,5 @@
 # Online School
-Project I did for my "Platforms for Object-oriented programming" class for my college
+Project I did for my "Platforms for Object-oriented programming" class for my college (third semestar)
 
 # Install / Start
 First you will need to clone this repository.
