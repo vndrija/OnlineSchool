@@ -1,5 +1,8 @@
 # Online School
-Project I did for my "Platforms for Object-oriented programming" class for my college (third semestar)
+Project I did for my "Platforms for Object-oriented programming" class for my college (third semestar).
+
+Stand-alone GUI .NET application in WPF technology for viewing and scheduling
+individual lessons in foreign language schools.
 
 # Install / Start
 First you will need to clone this repository.
